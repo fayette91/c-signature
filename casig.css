@@ -1,0 +1,67 @@
+:root{
+  --backd-1: #ededed;
+  --backd-2: #efefef;
+  --backd-3: #ebebeb;
+  --bordd-1: #d7d5d5;
+  --bordd-2: #ccc;
+  --bordd-3: #bbb;
+  --txtd-0: #aaa;
+  --txtd-1: #444;
+  --txtd-2: #555;
+  --txtd-3: #777;
+  --backn-2: #191919;
+  --backn-1: #151515;
+  --backn-3: #101010;
+  --bordn-0: #191919;
+  --bordn-1: #2c2c2c;
+  --bordn-2: #222;
+  --bordn-3: #333;
+  --txtn-1: #ccc;
+  --txtn-2: #aaa;
+  --txtn-3: #888;
+  --g7: #323A5F;
+  
+}
+
+.cal-bx {width: 350px; height: 200px; margin: auto; position: relative; border: 10px solid var(--bordd-1); outline: 1px solid var(--bordd-3); overflow: hidden; transition: all ease-in-out 0.7s}
+
+.cal-bx img {width: 350px; height: 200px; margin: auto; transition: all ease-in-out 0.7s; scale: 1}
+
+.cal-bx:hover {transition: all ease-in-out 0.7s; outline: 1px solid var(--g7);}
+
+.cal-bx:hover img {transition: all ease-in-out 0.7s; filter: grayscale(1) brightness(90%); scale: 1.2}
+
+.cal-c {width: 350px; height: 205px; margin: -205px 0px 0px 0px; position: absolute; background: var(--g7); mix-blend-mode: multiply; transition: all ease-in-out 0.7s; opacity: 0}
+
+.cal-bx:hover .cal-c {transition: all ease-in-out 0.7s; opacity: 1}
+
+.cal-uno {width: 80px; height: auto; margin: -120px 0px 0px 30px; position: absolute; font-family: staatliches; font-weight: bold; text-transform: uppercase; font-size: 40px; color: var(--g7); transition: all ease-in-out 0.7s; transition-delay: 0.3s}
+
+.cal-uno span {width: 100px; height: auto; font-size: 10px; color: #fff; background: var(--g7); font-family: inconsolata; padding: 2px; margin: 50px 0px 0px -80px; position: absolute; text-align: center;} 
+
+.cal-bx:hover .cal-uno {transition: all ease-in-out 0.7s; margin: -120px 0px 0px -200px;}
+
+.cal-dos {width: 300px; height: auto; margin: -150px 0px 0px 20px; position: absolute; font-family: inconsolata; color: #fff; text-transform: uppercase; font-size: 10px; text-align: center; line-height: 300%; transition: all ease-in-out 0.7s; opacity: 0}
+
+.cal-bx:hover .cal-dos {transition: all ease-in-out 0.7s; opacity: 1; transition-delay: 0.7s}
+
+.cal-w {width: auto; height: auto; display: flex; align-items: center; justify-content: center; text-align: center;}
+
+.c-glitch {position: relative; font-size: 50px; color: #fff; z-index: 1; font-family: staatliches; font-size: 40px;}
+
+.c-glitch:before, .c-glitch:after {display: block; content: attr(data-text); position: absolute; top: 0; left: 0; opacity: 0.8;}
+
+.c-glitch:before {animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite; color: #00FFFF; z-index: -1;}
+
+.c-glitch:after {animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite; color: #FF00FF; z-index: -2}
+
+@keyframes glitch-it {
+   0% { transform: translate(0); }
+   20% { transform: translate(-2px, 2px); }
+   40% { transform: translate(-2px, -2px); }
+   60% { transform: translate(2px, 2px); }
+   80% { transform: translate(2px, -2px); }
+   to { transform: translate(0); }
+}
+
+body.night .cal-bx {border: 10px solid var(--bordn-1)}
